@@ -7,7 +7,16 @@
 //
 
 #import "SetMatchingGameLogic.h"
+#import "SetCard.h"
 
 @implementation SetMatchingGameLogic
+
+@synthesize choosingPenalty;
+
+@synthesize mismatchPenalty;
+
+- (int)match:(nonnull NSArray <SetCard *> *)cards {
+    return 0;
+}
 
 @end

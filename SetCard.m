@@ -70,4 +70,10 @@
     BOOL dif = !((self.shading ==  firstCard.shading) || (self.shading == secondCard.shading) || (secondCard.shading == firstCard.shading));
     return equal || dif;
 }
+@synthesize chosen;
+
+@synthesize contents;
+
+@synthesize matched;
+
 @end

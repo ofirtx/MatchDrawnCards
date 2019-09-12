@@ -10,4 +10,12 @@
 
 @implementation PlayingCardMatchingGameLogic
 
+@synthesize choosingPenalty;
+
+@synthesize mismatchPenalty;
+
+- (int)match:(nonnull NSArray *)cards {
+    return 0;
+}
+
 @end

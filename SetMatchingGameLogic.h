@@ -13,6 +13,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SetMatchingGameLogic : NSObject <MatchingGameLogic>
 
+@property (nonatomic, readonly) NSUInteger mismatchPenalty;
+@property (nonatomic, readonly) NSUInteger choosingPenalty;
+
+
+-(int)match:(NSArray *)cards;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

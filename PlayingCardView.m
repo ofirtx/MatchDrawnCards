@@ -58,7 +58,9 @@
 #pragma mark - Gesture Handling
 
 - (void)touch:(UIPinchGestureRecognizer *)gesture{
-    //TODO handle touch
+    if(gesture.state == UIGestureRecognizerStateEnded){
+        self.faceUp = !self.faceUp;
+    }
 }
 
 #pragma mark - Drawing
@@ -100,6 +102,10 @@
     } else {
         [[UIImage imageNamed:@"cardback"] drawInRect:self.bounds];
     }
+}
+
+- (void)setNeedsDisplay{
+    [super setNeedsDisplay];
 }
 
 - (void)pushContextAndRotateUpsideDown

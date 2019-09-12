@@ -10,7 +10,7 @@
 @implementation SetCardMatchingGame
 
 
-- (instancetype)initWithCardCount:(NSUInteger)count usingDeck:(Deck *)deck{
+- (instancetype)initWithCardCount:(NSUInteger)count usingDeck:(id <Deck>)deck{
     self = [super initWithCardCount:count usingDeck:deck];
     self.numToMatch = 3;
     return self;

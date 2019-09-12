@@ -7,15 +7,23 @@
 //
 
 #import "MatchCardsViewController.h"
+#import "PlayingCardView.h"
 
 @interface MatchCardsViewController ()
+@property (weak, nonatomic) IBOutlet PlayingCardView *cardToFlip;
 
 @end
+
+
 
 @implementation MatchCardsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.cardToFlip.faceUp = NO;
+    self.cardToFlip.rank = 13;
+    self.cardToFlip.suit = @"♥︎";
+    [self.cardToFlip addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self.cardToFlip action:@selector(touch:)]];
     // Do any additional setup after loading the view.
 }
 
